@@ -1,6 +1,6 @@
 {
   "name": "sizeomatic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Estimate and format the size of JavaScript objects",
   "main": "index.js",
   "scripts": {
