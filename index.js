@@ -1,8 +1,8 @@
 var BYTE_RATIO =
 {
-	K : 1024,
-	M : 1024 * 1024,
-	G : 1024 * 1024 * 1024
+	Kilobytes : 1024,
+	Megabytes : 1024 * 1024,
+	Gigabytes : 1024 * 1024 * 1024
 };
 
 var FIX_AT = 3;
@@ -16,7 +16,6 @@ module.exports.howManyBytes = function (strSize)
 	size = size.replace(/B$/, "");
 
 	if ((/^\d+$/).test(size)) return parseInt(size, 10);
-
 
 	if ((/^\d+[K|M|G]?$/).test(size))
 	{
@@ -71,9 +70,9 @@ module.exports.getSize = function (object, format)
 	return bytes;
 };
 
-modules.exports.pretty = function (bytes)
+module.exports.pretty = function (bytes)
 {
-	if (bytes < ration.K) return bytes + "B";
+	if (bytes < BYTE_RATIO.Kilobytes) return bytes + "B";
     else if(bytes < BYTE_RATIO.Megabytes) return(bytes / BYTE_RATIO.Kilobytes).toFixed(FIX_AT) + "K";
     else if(bytes < BYTE_RATIO.Gigabytes) return(bytes / BYTE_RATIO.Megabytes).toFixed(FIX_AT) + "M";
     else return(bytes / BYTE_RATIO.Gigabytes).toFixed(FIX_AT) + "G";
