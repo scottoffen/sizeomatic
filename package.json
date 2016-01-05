@@ -1,0 +1,23 @@
+{
+  "name": "sizeomatic",
+  "version": "1.0.0",
+  "description": "Estimate and format the size of JavaScript objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottoffen/sizeomatic.git"
+  },
+  "keywords": [
+    "cache",
+    "size"
+  ],
+  "author": "Scott Offen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottoffen/sizeomatic/issues"
+  },
+  "homepage": "https://github.com/scottoffen/sizeomatic#readme"
+}
