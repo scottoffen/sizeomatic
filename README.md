@@ -1,6 +1,10 @@
 # sizeomatic #
 
-sizeomatic provides methods for approximating the amount of memory being used by a JavaScript object. The results should not be assumed to be accurate, but rather estimates based on useful approximations. It also exports two methods for converting between bytes and larger units of digital storage.
+An node.js module that provides methods for approximating the amount of memory being used by a JavaScript object. The results should not be assumed to be accurate, but rather estimates based on useful approximations. It also exports two methods for converting between bytes and larger units of digital storage.
+
+```
+$ npm install sizeomatic
+```
 
 ### Type/Size Approximation ###
 
