@@ -7,13 +7,13 @@ var BYTE_RATIO =
 
 var FIX_AT = 3;
 
-
 module.exports.howManyBytes = function (strSize)
 {
 	if (typeof strSize === 'number') return strSize;
 
 	var size = (typeof strSize !== 'string') ? strSize.toString().toUpperCase() : strSize.toUpperCase();
 	size = size.replace(/B$/, "");
+	size = size.replace(/^-/, "");
 
 	if ((/^\d+$/).test(size)) return parseInt(size, 10);
 
@@ -32,7 +32,7 @@ module.exports.howManyBytes = function (strSize)
 
 module.exports.getSize = function (object, format)
 {
-	if (!object) return 0;
+	if ((object === undefined) || (object === null)) return 0;
 
 	var objectList = [];
 	var stack = [object];
@@ -72,6 +72,9 @@ module.exports.getSize = function (object, format)
 
 module.exports.pretty = function (bytes)
 {
+	if (isNaN(bytes)) return 0;
+	if (bytes < 0) bytes = bytes * -1;
+
 	if (bytes < BYTE_RATIO.Kilobytes) return bytes + "B";
     else if(bytes < BYTE_RATIO.Megabytes) return(bytes / BYTE_RATIO.Kilobytes).toFixed(FIX_AT) + "K";
     else if(bytes < BYTE_RATIO.Gigabytes) return(bytes / BYTE_RATIO.Megabytes).toFixed(FIX_AT) + "M";

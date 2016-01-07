@@ -1,6 +1,6 @@
 # sizeomatic #
 
-An node.js module that provides methods for approximating the amount of memory being used by a JavaScript object. The results should not be assumed to be accurate, but rather estimates based on useful approximations. It also exports two methods for converting between bytes and larger units of digital storage.
+A module that provides methods for approximating the amount of memory being used by a JavaScript object. The results should not be assumed to be precisely accurate, but rather estimates based on useful approximations. It also exports two methods for converting between bytes and larger units of digital storage - which are accurate.
 
 ```
 $ npm install sizeomatic
@@ -75,7 +75,7 @@ console.log(sizeomatic.howManyBytes('125m'));
 
 console.log(sizeomatic.howManyBytes('125G'));
 /* 134217728000 */
-``` 
+```
 
 ### getSize ###
 
@@ -98,7 +98,7 @@ var rsize = sizeomatic.getSize(JSON.stringify(obj));
 /* result: 228 (bytes) */
 ```
 
-> Note that a serialized representation will of an object will return a larger value than the original object because it is being treated as a string.  
+> Note that a serialized representation will of an object will return a larger value than the original object because it is being treated as a string.
 
 ### pretty ###
 
@@ -117,3 +117,7 @@ console.log(sizeomatic.pretty(131672000));
 console.log(sizeomatic.pretty(139217728000));
 /* 129.657G */
 ```
+
+## Acknowledgments ##
+
+I used [`sizeof`](https://github.com/lyroyce/sizeof/blob/master/lib/sizeof.js) as the basis for this module, tweaked it, and added what I wanted.
