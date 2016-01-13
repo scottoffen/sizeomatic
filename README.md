@@ -121,3 +121,7 @@ console.log(sizeomatic.pretty(139217728000));
 ## Acknowledgments ##
 
 I used [`sizeof`](https://github.com/lyroyce/sizeof/blob/master/lib/sizeof.js) as the basis for this module, tweaked it, and added what I wanted.
+
+## Tests ##
+
+If you happen to run the unit tests for `sizeomatic` and check the code coverage using [`istanbul`](https://github.com/gotwarlost/istanbul), you will encounter this [known "issue" with missing "else" changing branch percentages](https://github.com/gotwarlost/istanbul/issues/35) that I still think is a defect. Rest assured that all branching conditions have sufficient unit tests.
