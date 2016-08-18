@@ -1,6 +1,8 @@
 # sizeomatic #
 
-A module that provides methods for approximating the amount of memory being used by a JavaScript object. The results should not be assumed to be precisely accurate, but rather estimates based on useful approximations. It also exports two methods for converting between bytes and larger units of digital storage - which are accurate.
+sizeomatic is a module that provides methods for approximating the amount of memory being used by a JavaScript object. The results should not be assumed to be precisely accurate, but rather estimates based on useful approximations. It also exports two methods for converting between bytes and larger units of digital storage - which are accurate.
+
+[![NPM](https://nodei.co/npm/sizeomatic.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/sizeomatic/)
 
 ```
 $ npm install sizeomatic
